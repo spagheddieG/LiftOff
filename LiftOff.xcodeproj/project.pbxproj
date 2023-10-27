@@ -14,6 +14,11 @@
 		88780B402AEB1CA0000487A6 /* LiftOffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88780B3F2AEB1CA0000487A6 /* LiftOffTests.swift */; };
 		88780B4A2AEB1CA0000487A6 /* LiftOffUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88780B492AEB1CA0000487A6 /* LiftOffUITests.swift */; };
 		88780B4C2AEB1CA0000487A6 /* LiftOffUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88780B4B2AEB1CA0000487A6 /* LiftOffUITestsLaunchTests.swift */; };
+		88780B592AEB1E26000487A6 /* bench-press.gif in Resources */ = {isa = PBXBuildFile; fileRef = 88780B582AEB1E26000487A6 /* bench-press.gif */; };
+		88780B5C2AEB1EAC000487A6 /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = 88780B5B2AEB1EAC000487A6 /* FLAnimatedImage */; };
+		88780B612AEB2454000487A6 /* WorkoutCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88780B602AEB2454000487A6 /* WorkoutCardView.swift */; };
+		88780B642AEB2743000487A6 /* SwiftUIGIF in Frameworks */ = {isa = PBXBuildFile; productRef = 88780B632AEB2743000487A6 /* SwiftUIGIF */; };
+		8883B9C12AEB68460015A21C /* Giffy in Frameworks */ = {isa = PBXBuildFile; productRef = 8883B9C02AEB68460015A21C /* Giffy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,8 @@
 		88780B452AEB1CA0000487A6 /* LiftOffUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiftOffUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88780B492AEB1CA0000487A6 /* LiftOffUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftOffUITests.swift; sourceTree = "<group>"; };
 		88780B4B2AEB1CA0000487A6 /* LiftOffUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftOffUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		88780B582AEB1E26000487A6 /* bench-press.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "bench-press.gif"; path = "../../../../Downloads/bench-press.gif"; sourceTree = "<group>"; };
+		88780B602AEB2454000487A6 /* WorkoutCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8883B9C12AEB68460015A21C /* Giffy in Frameworks */,
+				88780B5C2AEB1EAC000487A6 /* FLAnimatedImage in Frameworks */,
+				88780B642AEB2743000487A6 /* SwiftUIGIF in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,9 +104,11 @@
 		88780B2D2AEB1C9B000487A6 /* LiftOff */ = {
 			isa = PBXGroup;
 			children = (
+				88780B5F2AEB2438000487A6 /* Views */,
 				88780B2E2AEB1C9B000487A6 /* LiftOffApp.swift */,
 				88780B302AEB1C9B000487A6 /* ContentView.swift */,
 				88780B322AEB1C9F000487A6 /* Assets.xcassets */,
+				88780B582AEB1E26000487A6 /* bench-press.gif */,
 				88780B342AEB1C9F000487A6 /* Preview Content */,
 			);
 			path = LiftOff;
@@ -127,6 +139,14 @@
 			path = LiftOffUITests;
 			sourceTree = "<group>";
 		};
+		88780B5F2AEB2438000487A6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				88780B602AEB2454000487A6 /* WorkoutCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +163,11 @@
 			dependencies = (
 			);
 			name = LiftOff;
+			packageProductDependencies = (
+				88780B5B2AEB1EAC000487A6 /* FLAnimatedImage */,
+				88780B632AEB2743000487A6 /* SwiftUIGIF */,
+				8883B9C02AEB68460015A21C /* Giffy */,
+			);
 			productName = LiftOff;
 			productReference = 88780B2B2AEB1C9B000487A6 /* LiftOff.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +240,11 @@
 				Base,
 			);
 			mainGroup = 88780B222AEB1C9B000487A6;
+			packageReferences = (
+				88780B5A2AEB1EAC000487A6 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */,
+				88780B622AEB2743000487A6 /* XCRemoteSwiftPackageReference "swiftui-gif" */,
+				8883B9BF2AEB68460015A21C /* XCRemoteSwiftPackageReference "Giffy" */,
+			);
 			productRefGroup = 88780B2C2AEB1C9B000487A6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +263,7 @@
 			files = (
 				88780B362AEB1C9F000487A6 /* Preview Assets.xcassets in Resources */,
 				88780B332AEB1C9F000487A6 /* Assets.xcassets in Resources */,
+				88780B592AEB1E26000487A6 /* bench-press.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +290,7 @@
 			files = (
 				88780B312AEB1C9B000487A6 /* ContentView.swift in Sources */,
 				88780B2F2AEB1C9B000487A6 /* LiftOffApp.swift in Sources */,
+				88780B612AEB2454000487A6 /* WorkoutCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +620,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		88780B5A2AEB1EAC000487A6 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flipboard/FLAnimatedImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.17;
+			};
+		};
+		88780B622AEB2743000487A6 /* XCRemoteSwiftPackageReference "swiftui-gif" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/globulus/swiftui-gif";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+		8883B9BF2AEB68460015A21C /* XCRemoteSwiftPackageReference "Giffy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tfmart/Giffy.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		88780B5B2AEB1EAC000487A6 /* FLAnimatedImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88780B5A2AEB1EAC000487A6 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */;
+			productName = FLAnimatedImage;
+		};
+		88780B632AEB2743000487A6 /* SwiftUIGIF */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88780B622AEB2743000487A6 /* XCRemoteSwiftPackageReference "swiftui-gif" */;
+			productName = SwiftUIGIF;
+		};
+		8883B9C02AEB68460015A21C /* Giffy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8883B9BF2AEB68460015A21C /* XCRemoteSwiftPackageReference "Giffy" */;
+			productName = Giffy;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 88780B232AEB1C9B000487A6 /* Project object */;
 }
