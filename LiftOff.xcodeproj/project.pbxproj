@@ -14,11 +14,13 @@
 		88780B402AEB1CA0000487A6 /* LiftOffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88780B3F2AEB1CA0000487A6 /* LiftOffTests.swift */; };
 		88780B4A2AEB1CA0000487A6 /* LiftOffUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88780B492AEB1CA0000487A6 /* LiftOffUITests.swift */; };
 		88780B4C2AEB1CA0000487A6 /* LiftOffUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88780B4B2AEB1CA0000487A6 /* LiftOffUITestsLaunchTests.swift */; };
-		88780B592AEB1E26000487A6 /* bench-press.gif in Resources */ = {isa = PBXBuildFile; fileRef = 88780B582AEB1E26000487A6 /* bench-press.gif */; };
 		88780B5C2AEB1EAC000487A6 /* FLAnimatedImage in Frameworks */ = {isa = PBXBuildFile; productRef = 88780B5B2AEB1EAC000487A6 /* FLAnimatedImage */; };
 		88780B612AEB2454000487A6 /* WorkoutCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88780B602AEB2454000487A6 /* WorkoutCardView.swift */; };
 		88780B642AEB2743000487A6 /* SwiftUIGIF in Frameworks */ = {isa = PBXBuildFile; productRef = 88780B632AEB2743000487A6 /* SwiftUIGIF */; };
 		8883B9C12AEB68460015A21C /* Giffy in Frameworks */ = {isa = PBXBuildFile; productRef = 8883B9C02AEB68460015A21C /* Giffy */; };
+		88D916C92AEC4B8D0052098C /* WorkoutDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D916C82AEC4B8D0052098C /* WorkoutDetails.swift */; };
+		88D916CD2AEC5D520052098C /* workouts-squats.gif in Resources */ = {isa = PBXBuildFile; fileRef = 88D916CC2AEC5D520052098C /* workouts-squats.gif */; };
+		88D916D02AEC60F50052098C /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 88D916CF2AEC60F50052098C /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +51,10 @@
 		88780B452AEB1CA0000487A6 /* LiftOffUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiftOffUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88780B492AEB1CA0000487A6 /* LiftOffUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftOffUITests.swift; sourceTree = "<group>"; };
 		88780B4B2AEB1CA0000487A6 /* LiftOffUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftOffUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		88780B582AEB1E26000487A6 /* bench-press.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "bench-press.gif"; path = "../../../../Downloads/bench-press.gif"; sourceTree = "<group>"; };
 		88780B602AEB2454000487A6 /* WorkoutCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCardView.swift; sourceTree = "<group>"; };
+		88D916C82AEC4B8D0052098C /* WorkoutDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetails.swift; sourceTree = "<group>"; };
+		88D916CB2AEC5D430052098C /* bench-press.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "bench-press.gif"; sourceTree = "<group>"; };
+		88D916CC2AEC5D520052098C /* workouts-squats.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "workouts-squats.gif"; path = "../../../../../Downloads/workouts-squats.gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88D916D02AEC60F50052098C /* SDWebImageSwiftUI in Frameworks */,
 				8883B9C12AEB68460015A21C /* Giffy in Frameworks */,
 				88780B5C2AEB1EAC000487A6 /* FLAnimatedImage in Frameworks */,
 				88780B642AEB2743000487A6 /* SwiftUIGIF in Frameworks */,
@@ -104,11 +109,11 @@
 		88780B2D2AEB1C9B000487A6 /* LiftOff */ = {
 			isa = PBXGroup;
 			children = (
+				88D916CA2AEC5D3B0052098C /* Assets */,
 				88780B5F2AEB2438000487A6 /* Views */,
 				88780B2E2AEB1C9B000487A6 /* LiftOffApp.swift */,
 				88780B302AEB1C9B000487A6 /* ContentView.swift */,
 				88780B322AEB1C9F000487A6 /* Assets.xcassets */,
-				88780B582AEB1E26000487A6 /* bench-press.gif */,
 				88780B342AEB1C9F000487A6 /* Preview Content */,
 			);
 			path = LiftOff;
@@ -143,8 +148,18 @@
 			isa = PBXGroup;
 			children = (
 				88780B602AEB2454000487A6 /* WorkoutCardView.swift */,
+				88D916C82AEC4B8D0052098C /* WorkoutDetails.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		88D916CA2AEC5D3B0052098C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				88D916CC2AEC5D520052098C /* workouts-squats.gif */,
+				88D916CB2AEC5D430052098C /* bench-press.gif */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +182,7 @@
 				88780B5B2AEB1EAC000487A6 /* FLAnimatedImage */,
 				88780B632AEB2743000487A6 /* SwiftUIGIF */,
 				8883B9C02AEB68460015A21C /* Giffy */,
+				88D916CF2AEC60F50052098C /* SDWebImageSwiftUI */,
 			);
 			productName = LiftOff;
 			productReference = 88780B2B2AEB1C9B000487A6 /* LiftOff.app */;
@@ -244,6 +260,7 @@
 				88780B5A2AEB1EAC000487A6 /* XCRemoteSwiftPackageReference "FLAnimatedImage" */,
 				88780B622AEB2743000487A6 /* XCRemoteSwiftPackageReference "swiftui-gif" */,
 				8883B9BF2AEB68460015A21C /* XCRemoteSwiftPackageReference "Giffy" */,
+				88D916CE2AEC60F50052098C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 88780B2C2AEB1C9B000487A6 /* Products */;
 			projectDirPath = "";
@@ -263,7 +280,7 @@
 			files = (
 				88780B362AEB1C9F000487A6 /* Preview Assets.xcassets in Resources */,
 				88780B332AEB1C9F000487A6 /* Assets.xcassets in Resources */,
-				88780B592AEB1E26000487A6 /* bench-press.gif in Resources */,
+				88D916CD2AEC5D520052098C /* workouts-squats.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88D916C92AEC4B8D0052098C /* WorkoutDetails.swift in Sources */,
 				88780B312AEB1C9B000487A6 /* ContentView.swift in Sources */,
 				88780B2F2AEB1C9B000487A6 /* LiftOffApp.swift in Sources */,
 				88780B612AEB2454000487A6 /* WorkoutCardView.swift in Sources */,
@@ -646,6 +664,14 @@
 				kind = branch;
 			};
 		};
+		88D916CE2AEC60F50052098C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -663,6 +689,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8883B9BF2AEB68460015A21C /* XCRemoteSwiftPackageReference "Giffy" */;
 			productName = Giffy;
+		};
+		88D916CF2AEC60F50052098C /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88D916CE2AEC60F50052098C /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

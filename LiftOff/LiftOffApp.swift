@@ -11,7 +11,8 @@ import SwiftUI
 struct LiftOffApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WorkoutCardView(workoutDetails: GetWorkoutDetails(workout: .BenchPress))
+                .padding(30)
         }
     }
 }

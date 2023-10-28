@@ -7,68 +7,68 @@
 import SwiftUI
 import SwiftUIGIF
 import Giffy
+import AVKit
+import SDWebImageSwiftUI
 
 
 struct WorkoutCardView: View {
     
-    var url: URL
-    
+    @State var workoutDetails: WorkoutDetails
     var body: some View{
         
-        VStack(){
-            VStack {
-                AsyncGiffy(url: url) { phase in
-                    switch phase {
-                    case .loading:
-                        ProgressView()
-                    case .error:
-                        Text("Failed to load GIF")
-                    case .success(let giffy):
-                        giffy.frame(width:UIScreen.main.bounds.width, height:UIScreen.main.bounds.height/4)
-                    }
+        NavigationView
+        {
+            
+            VStack(){
+                VStack {
+                    WebImage(url: URL(string: workoutDetails.gif)!)
+                        .resizable()
+                        .frame(maxWidth: UIScreen.main.bounds.width, maxHeight: UIScreen.main.bounds.height/4, alignment: .leading)
                 }
+                
+                Text(workoutDetails.exercise)
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                
+                Text("Primary: \(workoutDetails.primary)")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                
+                Text("Secondary: \(workoutDetails.secondary)")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                
+                Spacer()
+                
+                HStack(content: {
+                    
+                    Button(action: {
+                        self.workoutDetails = GetWorkoutDetails(workout: .BenchPress)
+                    }, label: {
+                        Text("Bench Press")
+                    }).buttonStyle(.bordered)
+                    
+                    Button(action: {
+                        self.workoutDetails = GetWorkoutDetails(workout: .Squat)
+                    }, label: {
+                        Text("Squat")
+                    }).buttonStyle(.bordered)
+                    
+                    Button(action: {
+                        self.workoutDetails = GetWorkoutDetails(workout: .Deadlift)
+                    }, label: {
+                        Text("Deadlift")
+                    }).buttonStyle(.bordered)
+                })
+                Spacer()
+                
             }
-            
-            Text("Bench Press (Barbell)")
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            
-            Text("Primary: Chest")
-                .frame(maxWidth: .infinity, alignment: .leading)
-
-            Text("Secondary: Triceps, Shoulders")
-                .frame(maxWidth: .infinity, alignment: .leading)
-            
-            Spacer()
-
+            .navigationBarTitle(Text("Workouts"))
         }
     }
-        
 }
 
-enum WorkoutType {
-case BenchPress, Deadlift, Squat
-}
-
-func GetWorkoutGif(workout: WorkoutType) -> String {
-    if workout == WorkoutType.BenchPress{
-        return "https://media.tenor.com/0hoNLcggDG0AAAAC/bench-press.gif"
-    }
-    
-    else if workout == WorkoutType.Deadlift{
-        return "https://www.kettlebellkings.com/cdn/shop/articles/deadlift_exercise.gif?v=1694668938"
-    }
-    
-    else if workout == WorkoutType.Squat{
-        return "https://www.inspireusafoundation.org/wp-content/uploads/2022/03/barbell-full-squat.gif"
-    }
-    else{
-        return "empty"
-    }
-}
 
 #Preview {
     
-    WorkoutCardView(url: URL( string: GetWorkoutGif(workout: .Squat))!)
+    WorkoutCardView(workoutDetails: GetWorkoutDetails(workout: .BenchPress))
         .padding(30)
 }

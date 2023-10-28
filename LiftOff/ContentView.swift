@@ -22,5 +22,6 @@ struct ContentView: View {
 }
 
 #Preview {
-    Text("Hello World")
+    WorkoutCardView(workoutDetails: GetWorkoutDetails(workout: .BenchPress))
+        .padding(30)
 }
